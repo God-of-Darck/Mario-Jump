@@ -110,6 +110,14 @@
     animation: 50s clouds-animation1 infinite linear;
 }
 
+footer{
+    background-color: black !important;
+    text-align: center !important;
+    color: white !important;
+    font-size: 19px !important;
+    height: 5.9% !important;
+}
+
 /* Animção do mario pulando */
 @keyframes jump {
     0% {
