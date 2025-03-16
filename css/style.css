@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tela do Jogo */
+.game-bord {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(81, 245, 81);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87cfeb, #f8f6ff);
+}
+
+/* msg de vitoria */
+.winer-msg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.winer-msg-bottom {
+    font-size: 2.5rem;
+    background-color: rgba(65, 185, 133, 1);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    border-top: 16px;
+    color: white;
+}
+
+.winer-msg-bottom:hover {
+    color: rgba(65, 185, 133, 1);
+    background-color: white;
+}
+
+.winer-msg-txt {
+    color: white;
+    font-size: 3rem;
+}
+
+.shouWiner-msg {
+    display: flex;
+}
+
+/* O Cano */
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    animation: pipe-animation 1.9s infinite linear;
+}
+
+/* contador de pontos */
+.contador {
+    width: 10%;
+    height: 25px;
+    border: 1px solid black;
+    background-color: aqua;
+    text-align: center;
+    left: 45%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.txtcontador {
+    padding: 0.3em;
+    font-size: 80%;
+}
+
+/* O Mario */
+.mario-bros {
+    padding: 0;
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+/* pulo */
+.jump {
+    animation: jump 900ms ease-out !important;
+}
+
+/* Nuvens */
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: 30s clouds-animation infinite linear;
+}
+
+#clouds-1 {
+    position: absolute;
+    width: 550px;
+    animation: 40s clouds-animation1 infinite linear;
+}
+
+#clouds-2 {
+    position: absolute;
+    width: 550px;
+    animation: 50s clouds-animation1 infinite linear;
+}
+
+/* Animção do mario pulando */
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    10% {
+        bottom: 77px;
+    }
+
+    40% {
+        bottom: 155px;
+    }
+
+    50% {
+        bottom: 155px;
+    }
+
+    60% {
+        bottom: 155px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+/* Animação do cano indo da direita para a esquerda */
+@keyframes pipe-animation {
+    from {
+        right: -70px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+/* Animação das Nuvem */
+@keyframes clouds-animation {
+    from {
+        right: -50%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation1 {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation2 {
+    from {
+        right: -150%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
